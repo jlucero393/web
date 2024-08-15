@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Municipalidad de Desaguadero</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="logo-gobierno.png" alt="Logo Gobierno Municipal" class="logo">
+        <div class="header-title">
+            <h1>Municipalidad de Desaguadero</h1>
+        </div>
+        <!--Aca esta las redes en el encabezado-->
+        <div class="social-links">
+            <a href="https://www.facebook.com/?locale=es_LA" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://x.com/?lang=es" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://web.whatsapp.com/" target="_blank" aria-label="whatsapp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <!--Aca continua el codigo normalmente-->
+        
+        <!--Aca esta el menu Hambuerguesa Movil-->
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <nav>
+        <ul class="menu-items">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#noticias">Noticias</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="inicio">
+            <h2>Bienvenidos a Municipalidad de Desaguadero</h2>
+            <p>Bienvenidos a la página oficial de nuestro municipio. Aquí encontrará información sobre servicios, noticias y eventos locales.</p>
+        </section>
+        
+        <!--Esto es lo nuevo para incrustar info de sobre Desaguadero, funciona -->
+        <!--<article class="noticia-card">
+            <img src="Imagenes/Municipio.jpg" alt="Mantenimiento de ruta">
+            <h3>Un poco de Historia de Desaguadero</h3>
+            <p>Se realizaron tareas de mejora en sistemas eléctricos y de seguridad.</p>
+            <br> <br>-->
+
+        <section id="servicios">
+            <h2>Servicios Municipales</h2>
+            <div class="servicios-grid">
+                <div class="servicio">
+                    <a href="tramites-documentos.html">
+                        <i class="fas fa-file-alt servicio-icon"></i>
+                        <h3>Trámites y documentos</h3>
+                        <p>Gestione sus trámites y obtenga documentos oficiales.</p>
+                    </a>
+                </div>
+                <div class="servicio">
+                    <a href="pago-impuestos.html">
+                        <i class="fas fa-money-bill-wave servicio-icon"></i>
+                        <h3>Pago de impuestos</h3>
+                        <p>Realice sus pagos de impuestos municipales en línea.</p>
+                    </a>
+                </div>
+                <div class="servicio">
+                    <a href="recoleccion-residuos.html">
+                        <i class="fas fa-trash servicio-icon"></i>
+                        <h3>Recolección de residuos</h3>
+                        <p>Infórmese sobre los horarios de recolección en su zona.</p>
+                    </a>
+                </div>
+                <div class="servicio">
+                    <a href="areas-verdes.html">
+                        <i class="fas fa-tree servicio-icon"></i>
+                        <h3>Mantenimiento de áreas verdes</h3>
+                        <p>Conozca nuestros programas de cuidado de espacios públicos.</p>
+                    </a>
+                </div>
+                <div class="servicio">
+                    <a href="registro-civil.html">
+                        <i class="fas fa-book servicio-icon"></i>
+                        <h3>Registro Civil</h3>
+                        <p>Información sobre servicios del Registro Civil.</p>
+                    </a>
+                </div>
+                <div class="servicio">
+                    <a href="licencia-conducir.html">
+                        <i class="fas fa-id-card servicio-icon"></i>
+                        <h3>Licencia de conducir</h3>
+                        <p>Información sobre trámites de licencia de conducir.</p>
+                    </a>
+                </div>
+                <div class="servicio">
+                    <a href="organigrama-municipal.html">
+                        <i class="fas fa-box servicio-icon"></i>
+                        <h3>Organigrama Municipal</h3>
+                        <p>Información sobre estructura.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="noticias">
+            <h2>Últimas Noticias</h2>
+            <div class="noticias-grid">
+                <article class="noticia-card">
+                    <img src="Imagenes/Tareas de Mantenimiento.jpg" alt="Mantenimiento de ruta">
+                    <h3>Realizaron tareas de mantenimiento y mejoras en la Barrera Fitosanitaria de Desaguadero</h3>
+                    <p>Se realizaron tareas de mejora en sistemas eléctricos y de seguridad.</p>
+                    <a href="https://agenciasanluis.com/2024/07/25/961357-realizaron-tareas-de-mantenimiento-y-mejoras-en-la-barrera-fitosanitaria-de-desaguadero/" target="_blank" class="leer-mas">Leer más</a>
+                </article>
+
+                <article class="noticia-card">
+                    <img src="Imagenes/google certificado.jpg" alt="Capacitaciones en ULP">
+                    <h3>Docentes de toda la provincia ya se pueden inscribir para las certificaciones de Google</h3>
+                    <p>Se trata del relanzamiento de Educador Google nivel 1 y Google Nivel 2.</p>
+                    <a href="https://agenciasanluis.com/2024/07/27/962165-la-energia-de-los-adultos-mayores-volvio-a-inundar-el-ave-fenix/" target="_blank" class="leer-mas"> Leer más</a>
+                </article>
+
+                <article class="noticia-card">
+                    <img src="Imagenes/Agenda gober.jpg" alt="Agenda Gobernador">
+                    <h3>Agenda del Gobernador en Pringles y Chacabuco</h3>
+                    <p>JEl gobernador, Claudio Poggi junto a su gabinete encabezará una nueva gira.</p>
+                    <a href="https://agenciasanluis.com/2024/08/08/966295-agenda-del-gobernador-en-pringles-y-chacabuco/" target="_blank" class="leer-mas"> Leer más</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="galeria">
+            <h2>Galería de Desaguadero</h2>
+            <div class="galeria-grid">
+                <img src="Imagenes/Puesto.jpg" alt="Municipio">
+                <img src="Imagenes/Río_Desaguadero_Argentina.jpg" alt="Río Desaguadero">
+                <img src="Imagenes/Desaguadero,_San_Luis,_Argentina.jpg" alt="Vista de Desaguadero">
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <div class="contacto-info">
+                <p><i class="fas fa-map-marker-alt"></i> Dirección: Calle sin Numero 850</p>
+                <p><i class="fas fa-phone"></i> Teléfono: +549 2664377798</p>
+                <p><i class="fas fa-envelope"></i> Email: intendencia@municipalidadedesaguadero.com</p>
+            </div>
+                <form id="contacto-form" action="mailto:jose.lucero@yopmail.com" method="post" enctype="text/plain">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <h4>Seguinos en nuestras Redes</h4>
+            <a href="https://www.facebook.com/?locale=es_LA" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://x.com/?lang=es" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://web.whatsapp.com/" target="_blank" aria-label="whatsapp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div class="footer-content">
+            <h5>© 2024 Municipio de Desaguadero.</h5>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

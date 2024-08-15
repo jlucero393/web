@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Municipalidad de Desaguadero</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="logo-gobierno.png" alt="Logo Gobierno Municipal" class="logo">
+        <h1>Municipalidad de Desaguadero</h1>
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </header>
+
+    <nav>
+        <ul class="menu-items">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html">Servicios</a></li>
+            <li><a href="index.html">Noticias</a></li>
+            <li><a href="index.html">Galería</a></li>
+            <li><a href="index.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <style>
+        .turnero {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .turnero select, .turnero input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .turnero button {
+            width: 100%;
+            padding: 10px;
+            background-color: #005a87;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .turnero button:hover {
+            background-color: #004a70;
+        }
+    </style>
+
+    <main>
+        <section class="turnero">
+            <h2>Reserva de Turno - Licencia de Conducir</h2>
+            <form id="turnerForm">
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+                <input type="text" id="documento" name="documento" placeholder="Número de documento" required>
+                <input type="tel" id="contacto" name="contacto" placeholder="Teléfono de contacto" required>
+                <input type="date" id="fecha" name="fecha" required>
+                <select id="hora" name="hora" required>
+                    <option value="" disabled selected>Seleccione una hora</option>
+                    <!-- Aquí se pueden agregar las opciones de hora -->
+                </select>
+                <button type="submit">Reservar Turno</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Municipio de Desaguadero. Todos los derechos reservados.</p>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const horaSelect = document.getElementById('hora');
+            const fechaInput = document.getElementById('fecha');
+            const form = document.getElementById('turnoForm');
+
+            // Generar opciones de hora
+            for (let i = 8; i < 14; i++) {
+                let hora = i < 10 ? '0' + i : i;
+                horaSelect.innerHTML += `<option value="${hora}:00">${hora}:00</option>`;
+                horaSelect.innerHTML += `<option value="${hora}:30">${hora}:30</option>`;
+            }
+
+            // Reemplaza la función de validación de fecha existente con esta:
+                fechaInput.addEventListener('change', function() {
+                const fecha = new Date(this.value);
+            // getDay() devuelve 0 para domingo, 1 para lunes, ..., 6 para sábado
+                if (fecha.getDay() === 0 || fecha.getDay() === 6) {
+                alert('Por favor, seleccione un día de lunes a viernes.');
+                this.value = '';
+                }
+            });
+
+            // Manejar el envío del formulario
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const fecha = fechaInput.value;
+                const hora = horaSelect.value;
+                alert(`Turno reservado para el ${fecha} a las ${hora}. Se le enviará un correo electronico de confirmación.`);
+                // Aquí puedes agregar código para enviar los datos a un servidor
+            });
+        });
+    </script>
+<footer>
+    <div class="social-links">
+        <h4>Seguinos en nuestras Redes</h4>
+        <a href="https://www.facebook.com/?locale=es_LA" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://x.com/?lang=es" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://web.whatsapp.com/" target="_blank" aria-label="whatsapp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <div class="footer-content">
+        <h5>© 2024 Municipio de Desaguadero.</h5>
+    </div>
+</footer>
+</body>
+</html>
